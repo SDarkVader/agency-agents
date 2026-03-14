@@ -27,11 +27,25 @@ Born from a Reddit thread and months of iteration, **The Agency** is a growing c
 ### Option 1: Use with Claude Code (Recommended)
 
 ```bash
-# Copy agents to your Claude Code directory
-cp -r agency-agents/* ~/.claude/agents/
+# Clone the repo
+git clone https://github.com/msitarzewski/agency-agents
+cd agency-agents
 
-# Now activate any agent in your Claude Code sessions:
-# "Hey Claude, activate Frontend Developer mode and help me build a React component"
+# Install all agents to your Claude Code agents directory
+./scripts/install.sh --tool claude-code
+
+# Or copy a specific category manually
+cp engineering/*.md ~/.claude/agents/
+```
+
+Then activate any agent in your Claude Code sessions:
+
+```
+Use the Frontend Developer agent to help me build a React component.
+```
+
+```
+Activate the Reality Checker and verify this feature is production-ready.
 ```
 
 ### Option 2: Use as Reference
